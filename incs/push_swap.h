@@ -6,7 +6,7 @@
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 19:25:52 by afogonca          #+#    #+#             */
-/*   Updated: 2026/01/02 21:03:52 by afogonca         ###   ########.fr       */
+/*   Updated: 2026/01/02 21:11:36 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ typedef struct s_data
 
 t_data	*ft_new_data(int ac, char **av);
 void	ft_free_data(t_data	*data);
-int		ft_lista_add_back(t_lista **list, long nbr);
+int		ft_lista_add_back(t_lista **head, t_lista **tail, long nbr);
 t_lista	*ft_xor(t_lista *x, t_lista *y);
 void	ft_free_lista(t_lista *curr);
 

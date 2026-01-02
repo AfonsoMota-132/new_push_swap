@@ -6,7 +6,7 @@
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 19:48:00 by afogonca          #+#    #+#             */
-/*   Updated: 2026/01/02 21:04:35 by afogonca         ###   ########.fr       */
+/*   Updated: 2026/01/02 21:15:32 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_iterate_split(t_data *data, char **split)
 	{
 		if (ft_ver_str(split[i]))
 			return (1);
-		if (ft_lista_add_back(&data->head_a, ft_atol(split[i])))
+		if (ft_lista_add_back(&data->head_a, &data->tail_a, ft_atol(split[i])))
 			return (1);
 		i++;
 	}
@@ -76,8 +76,6 @@ void	ft_free_data(t_data	*data)
 	{
 		if (data->head_a)
 			ft_free_lista(data->head_a);
-		if (data->tail_a)
-			ft_free_lista(data->tail_a);
 		free(data);
 	}
 }

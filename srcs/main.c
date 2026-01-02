@@ -6,7 +6,7 @@
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 19:32:32 by afogonca          #+#    #+#             */
-/*   Updated: 2026/01/02 20:42:12 by afogonca         ###   ########.fr       */
+/*   Updated: 2026/01/02 21:15:42 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,19 @@ int	main(int ac, char **av)
 		while (curr)
 		{
 			printf("%i\n", curr->nbr);
-			next = ft_XOR(prev, curr->both);
+			next = ft_xor(prev, curr->both);
 			prev = curr;
 			curr = next;
+		}
+		printf("\n");
+		curr = data->tail_a;
+		next = NULL;
+		while (curr)
+		{
+			printf("%i\n", curr->nbr);
+			prev = ft_xor(next, curr->both);
+			next = curr;
+			curr = prev;
 		}
 		ft_free_data(data);
 	}

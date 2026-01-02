@@ -6,7 +6,7 @@
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 20:00:07 by afogonca          #+#    #+#             */
-/*   Updated: 2026/01/02 21:10:08 by afogonca         ###   ########.fr       */
+/*   Updated: 2026/01/02 21:13:33 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,19 @@ t_lista	*ft_lista_new(int nbr)
 	return (new);
 }
 
-int	ft_lista_add_utils(t_lista **list, long nbr)
+int	ft_lista_add_utils(t_lista **head, t_lista **tail, long nbr)
 {
 	t_lista	*prev;
 	t_lista	*curr;
 	t_lista	*next;
 
 	prev = NULL;
-	curr = *list;
+	curr = *head;
 	while (curr != NULL)
 	{
 		if (curr->nbr == nbr)
 			return (ft_putstr_fd("Error!\nDuplicate Detected\n", 2), 1);
-		next = ft_XOR(prev, curr->both);
+		next = ft_xor(prev, curr->both);
 		if (!next)
 			break ;
 		prev = curr;
@@ -46,17 +46,21 @@ int	ft_lista_add_utils(t_lista **list, long nbr)
 	next = ft_lista_new(nbr);
 	next->both = curr;
 	curr->both = ft_xor(prev, next);
+	*tail = next;
 	return (0);
 }
 
-int	ft_lista_add_back(t_lista **list, long nbr)
+int	ft_lista_add_back(t_lista **head, t_lista **tail, long nbr)
 {
 	if (nbr >= INT_MAX || nbr <= INT_MIN)
 		return (ft_putstr_fd("Error\nNumber needs to be an int!\n", 2), 1);
-	if (!*list)
-		*list = ft_lista_new(nbr);
+	if (!*head)
+	{
+		*head = ft_lista_new(nbr);
+		*tail = *head;
+	}
 	else
-		return (ft_lista_add_utils(list, nbr));
+		return (ft_lista_add_utils(head, tail, nbr));
 	return (0);
 }
 
@@ -68,7 +72,7 @@ void	ft_free_lista(t_lista *curr)
 	prev = NULL;
 	while (curr != NULL)
 	{
-		next = ft_XOR(prev, curr->both);
+		next = ft_xor(prev, curr->both);
 		prev = curr;
 		curr = next;
 		free(prev);
