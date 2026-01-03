@@ -1,0 +1,91 @@
+pb
+pb
+sb
+rb
+pb
+rb
+pb
+rrb
+pb
+ra
+pb
+After push_b: head_b=9, tail_b=9
+After push_b: head_b=1, tail_b=9
+before cheapest, whats it pushing? 5
+>>> Pushing nbr:5 id:4 | target nbr:1 id:0 | costs: A=0 B=1 | smallest=0
+After push_b: head_b=5, tail_b=9
+stack a
+nbr: 3	id: 2
+nbr: 7	id: 6
+nbr: 2	id: 1
+nbr: 8	id: 7
+nbr: 4	id: 3
+nbr: 6	id: 5
+
+stack b
+nbr: 5	id: 4
+nbr: 1	id: 0
+nbr: 9	id: 8
+
+before cheapest, whats it pushing? 3
+>>> Pushing nbr:3 id:2 | target nbr:1 id:0 | costs: A=0 B=1 | smallest=0
+After push_b: head_b=3, tail_b=5
+stack a
+nbr: 7	id: 6
+nbr: 2	id: 1
+nbr: 8	id: 7
+nbr: 4	id: 3
+nbr: 6	id: 5
+
+stack b
+nbr: 3	id: 2
+nbr: 1	id: 0
+nbr: 9	id: 8
+nbr: 5	id: 4
+
+before cheapest, whats it pushing? 7
+>>> Pushing nbr:7 id:6 | target nbr:5 id:4 | costs: A=0 B=-1 | smallest=0
+After push_b: head_b=7, tail_b=9
+stack a
+nbr: 2	id: 1
+nbr: 8	id: 7
+nbr: 4	id: 3
+nbr: 6	id: 5
+
+stack b
+nbr: 7	id: 6
+nbr: 5	id: 4
+nbr: 3	id: 2
+nbr: 1	id: 0
+nbr: 9	id: 8
+
+before cheapest, whats it pushing? 8
+>>> Pushing nbr:8 id:7 | target nbr:7 id:6 | costs: A=1 B=0 | smallest=0
+After push_b: head_b=8, tail_b=9
+stack a
+nbr: 4	id: 3
+nbr: 6	id: 5
+nbr: 2	id: 1
+
+stack b
+nbr: 8	id: 7
+nbr: 7	id: 6
+nbr: 5	id: 4
+nbr: 3	id: 2
+nbr: 1	id: 0
+nbr: 9	id: 8
+
+final
+stack a
+nbr: 4	id: 3
+nbr: 6	id: 5
+nbr: 2	id: 1
+
+stack b
+nbr: 8	id: 7
+nbr: 7	id: 6
+nbr: 5	id: 4
+nbr: 3	id: 2
+nbr: 1	id: 0
+nbr: 9	id: 8
+

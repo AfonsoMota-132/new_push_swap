@@ -79,11 +79,46 @@ int	ft_lista_add_back(t_lista **head, t_lista **tail, long nbr)
 	if (!*head)
 	{
 		*head = ft_lista_new(nbr);
-		if (*head)
+		if (!*head)
 			return (1);
 		*tail = *head;
 	}
 	else
 		return (ft_lista_add_utils(head, tail, nbr));
 	return (0);
+}
+
+size_t	ft_lista_get_index(t_lista	*head, t_lista *node)
+{
+	size_t	i;
+	t_lista	*prev;
+	t_lista	*curr;
+	t_lista	*next;
+
+	i = 0;
+	prev = NULL;
+	curr = head;
+	while (curr && curr != node)
+	{
+		next = ft_xor(prev, curr->both);
+		prev = curr;
+		curr = next;
+		i++;
+	}
+	return (i);
+}
+
+t_lista	*ft_get_tail(t_lista *curr)
+{
+	t_lista	*prev;
+	t_lista	*next;
+
+	prev = NULL;
+	while (curr)
+	{
+		next = ft_xor(curr->both, prev);
+		prev = curr;
+		curr = next;
+	}
+	return (prev);
 }
