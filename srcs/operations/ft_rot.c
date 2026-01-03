@@ -12,12 +12,12 @@
 
 #include "../../incs/push_swap.h"
 
-void	ft_rotate(t_lista **head, t_lista **tail, char *str)
+void	ft_rotate(t_stack **head, t_stack **tail, char *str)
 {
-	t_lista	*curr;
-	t_lista	*prev;
+	t_stack	*curr;
+	t_stack	*prev;
 
-	if (ft_lista_size(*head) <= 1)
+	if (ft_stack_size(*head) <= 1)
 		return ;
 	curr = ft_rmv_head(head);
 	prev = *tail;
@@ -34,12 +34,12 @@ void	ft_rotate_both(t_data *data)
 	ft_rotate(&data->head_b, &data->tail_b, "rr\n");
 }
 
-void	ft_rev_rotate(t_lista **head, t_lista **tail, char *str)
+void	ft_rev_rotate(t_stack **head, t_stack **tail, char *str)
 {
-	t_lista	*curr;
-	t_lista	*next;
+	t_stack	*curr;
+	t_stack	*next;
 
-	if (ft_lista_size(*head) <= 1)
+	if (ft_stack_size(*head) <= 1)
 		return ;
 	curr = ft_rmv_tail(tail);
 	next = *head;

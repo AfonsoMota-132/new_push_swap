@@ -12,11 +12,11 @@
 
 #include "../incs/push_swap.h"
 
-t_lista	*ft_index_min(t_lista *curr)
+t_stack	*ft_index_min(t_stack *curr)
 {
-	t_lista	*prev;
-	t_lista	*next;
-	t_lista	*tmp;
+	t_stack	*prev;
+	t_stack	*next;
+	t_stack	*tmp;
 
 	prev = NULL;
 	tmp = NULL;
@@ -33,14 +33,14 @@ t_lista	*ft_index_min(t_lista *curr)
 	return (tmp);
 }
 
-void	ft_lista_index(t_lista *head)
+void	ft_stack_index(t_stack *head)
 {
 	size_t	size;
 	size_t	i;
-	t_lista	*tmp;
+	t_stack	*tmp;
 
 	i = 0;
-	size = ft_lista_size(head);
+	size = ft_stack_size(head);
 	while (i < size)
 	{
 		tmp = ft_index_min(head);
@@ -52,11 +52,11 @@ void	ft_lista_index(t_lista *head)
 
 bool	ft_ver_sorted(t_data *data)
 {
-	t_lista	*prev;
-	t_lista	*curr;
-	t_lista	*next;
+	t_stack	*prev;
+	t_stack	*curr;
+	t_stack	*next;
 
-	if (ft_lista_size(data->head_b))
+	if (ft_stack_size(data->head_b))
 		return (false);
 	curr = data->head_a;
 	prev = NULL;

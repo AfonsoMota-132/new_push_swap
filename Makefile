@@ -18,9 +18,9 @@ MAKE=make -C
 
 LIBFT=libft/libft.a
 
-OPERATIONS=$(addprefix operations/, ft_push_swap.c ft_rot.c ft_utils.c)
+OPERATIONS=$(addprefix operations/, ft_push_swap.c ft_rot.c ft_oper_utils.c)
 
-SRCS=$(addprefix srcs/, main.c ft_data.c ft_lista.c ft_free.c ft_index.c ft_sort.c $(OPERATIONS))
+SRCS=$(addprefix srcs/, main.c ft_data.c ft_stack.c ft_free.c ft_index.c ft_sort.c $(OPERATIONS))
 OBJS=$(SRCS:.c=.o)
 
 all: $(NAME)

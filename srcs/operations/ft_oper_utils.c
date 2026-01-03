@@ -12,15 +12,15 @@
 
 #include "../../incs/push_swap.h"
 
-t_lista	*ft_xor(t_lista *x, t_lista *y)
+t_stack	*ft_xor(t_stack *x, t_stack *y)
 {
-	return ((t_lista *)((uintptr_t)(x) ^ (uintptr_t)(y)));
+	return ((t_stack *)((uintptr_t)(x) ^ (uintptr_t)(y)));
 }
 
-t_lista	*ft_rmv_head(t_lista **head)
+t_stack	*ft_rmv_head(t_stack **head)
 {
-	t_lista	*curr;
-	t_lista	*next;
+	t_stack	*curr;
+	t_stack	*next;
 
 	if (!*head)
 		return (NULL);
@@ -33,10 +33,10 @@ t_lista	*ft_rmv_head(t_lista **head)
 	return (curr);
 }
 
-t_lista	*ft_rmv_tail(t_lista **tail)
+t_stack	*ft_rmv_tail(t_stack **tail)
 {
-	t_lista	*curr;
-	t_lista	*prev;
+	t_stack	*curr;
+	t_stack	*prev;
 
 	if (!*tail)
 		return (NULL);

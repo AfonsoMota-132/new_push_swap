@@ -12,22 +12,6 @@
 
 #include "../incs/push_swap.h"
 
-void	ft_print_lista(t_lista *curr)
-{
-	t_lista	*prev;
-	t_lista	*next;
-
-	prev = NULL;
-	while (curr)
-	{
-		printf("nbr: %i\tid: %i\n", curr->nbr, curr->id);
-		next = ft_xor(prev, curr->both);
-		prev = curr;
-		curr = next;
-	}
-	printf("\n");
-}
-
 int	main(int ac, char **av)
 {
 	t_data	*data;
@@ -39,8 +23,8 @@ int	main(int ac, char **av)
 		data = ft_new_data(ac, av);
 		if (!data)
 			return (1);
-		ft_lista_index(data->head_a);
-		data->size = ft_lista_size(data->head_a);
+		ft_stack_index(data->head_a);
+		data->size = ft_stack_size(data->head_a);
 		ft_sort(data);
 		if (data)
 			ft_free_data(data);

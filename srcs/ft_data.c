@@ -12,24 +12,6 @@
 
 #include "../incs/push_swap.h"
 
-int	ft_ver_str(char	*str)
-{
-	size_t	i;
-
-	i = 0;
-	if (!str)
-		return (0);
-	if (str[i] == '+' || str[i] == '-')
-		i++;
-	if (!str[i])
-		return (ft_putstr_fd("Error\nInvalid Number detected", 2), 1);
-	while (str[i] >= '0' && str[i] <= '9')
-		i++;
-	if (str[i])
-		return (ft_putstr_fd("Error\nInvalid Number detected", 2), 1);
-	return (0);
-}
-
 int	ft_iterate_split(t_data *data, char **split)
 {
 	size_t	i;
@@ -39,7 +21,7 @@ int	ft_iterate_split(t_data *data, char **split)
 	{
 		if (ft_ver_str(split[i]))
 			return (1);
-		if (ft_lista_add_back(&data->head_a, &data->tail_a, ft_atol(split[i])))
+		if (ft_stack_add_back(&data->head_a, &data->tail_a, ft_atol(split[i])))
 			return (1);
 		i++;
 	}
@@ -66,4 +48,16 @@ t_data	*ft_new_data(int ac, char **av)
 		ft_free_split(split);
 	}
 	return (data);
+}
+
+void	ft_free_data(t_data	*data)
+{
+	if (data)
+	{
+		if (data->head_a)
+			ft_free_stack(data->head_a);
+		if (data->head_b)
+			ft_free_stack(data->head_b);
+		free(data);
+	}
 }

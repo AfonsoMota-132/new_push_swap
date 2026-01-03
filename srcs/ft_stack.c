@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lista.c                                         :+:      :+:    :+:   */
+/*   ft_stack.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,11 +12,32 @@
 
 #include "../incs/push_swap.h"
 
-t_lista	*ft_lista_new(int nbr)
+t_stack	*ft_find_max(t_stack *head)
 {
-	t_lista	*new;
+	t_stack	*max;
+	t_stack	*current;
+	t_stack	*prev;
+	t_stack	*next;
 
-	new = ft_calloc(1, sizeof(t_lista));
+	max = head;
+	current = head;
+	prev = NULL;
+	while (current)
+	{
+		if (current->id > max->id)
+			max = current;
+		next = ft_xor(prev, current->both);
+		prev = current;
+		current = next;
+	}
+	return (max);
+}
+
+t_stack	*ft_stack_new(int nbr)
+{
+	t_stack	*new;
+
+	new = ft_calloc(1, sizeof(t_stack));
 	if (!new)
 		return (NULL);
 	new->nbr = nbr;
@@ -25,11 +46,11 @@ t_lista	*ft_lista_new(int nbr)
 	return (new);
 }
 
-size_t	ft_lista_size(t_lista *head)
+size_t	ft_stack_size(t_stack *head)
 {
-	t_lista	*prev;
-	t_lista	*curr;
-	t_lista	*next;
+	t_stack	*prev;
+	t_stack	*curr;
+	t_stack	*next;
 	size_t	i;
 
 	i = 0;
@@ -45,11 +66,11 @@ size_t	ft_lista_size(t_lista *head)
 	return (i);
 }
 
-int	ft_lista_add_utils(t_lista **head, t_lista **tail, long nbr)
+int	ft_stack_add_utils(t_stack **head, t_stack **tail, long nbr)
 {
-	t_lista	*prev;
-	t_lista	*curr;
-	t_lista	*next;
+	t_stack	*prev;
+	t_stack	*curr;
+	t_stack	*next;
 
 	prev = NULL;
 	curr = *head;
@@ -63,7 +84,7 @@ int	ft_lista_add_utils(t_lista **head, t_lista **tail, long nbr)
 		prev = curr;
 		curr = next;
 	}
-	next = ft_lista_new(nbr);
+	next = ft_stack_new(nbr);
 	if (!next)
 		return (1);
 	next->both = curr;
@@ -72,28 +93,28 @@ int	ft_lista_add_utils(t_lista **head, t_lista **tail, long nbr)
 	return (0);
 }
 
-int	ft_lista_add_back(t_lista **head, t_lista **tail, long nbr)
+int	ft_stack_add_back(t_stack **head, t_stack **tail, long nbr)
 {
 	if (nbr >= INT_MAX || nbr <= INT_MIN)
 		return (ft_putstr_fd("Error\nNumber needs to be an int!\n", 2), 1);
 	if (!*head)
 	{
-		*head = ft_lista_new(nbr);
+		*head = ft_stack_new(nbr);
 		if (!*head)
 			return (1);
 		*tail = *head;
 	}
 	else
-		return (ft_lista_add_utils(head, tail, nbr));
+		return (ft_stack_add_utils(head, tail, nbr));
 	return (0);
 }
 
-size_t	ft_lista_get_index(t_lista	*head, t_lista *node)
+size_t	ft_stack_get_index(t_stack	*head, t_stack *node)
 {
 	size_t	i;
-	t_lista	*prev;
-	t_lista	*curr;
-	t_lista	*next;
+	t_stack	*prev;
+	t_stack	*curr;
+	t_stack	*next;
 
 	i = 0;
 	prev = NULL;
@@ -108,17 +129,17 @@ size_t	ft_lista_get_index(t_lista	*head, t_lista *node)
 	return (i);
 }
 
-t_lista	*ft_get_tail(t_lista *curr)
+void	ft_free_stack(t_stack *curr)
 {
-	t_lista	*prev;
-	t_lista	*next;
+	t_stack	*prev;
+	t_stack	*next;
 
 	prev = NULL;
-	while (curr)
+	while (curr != NULL)
 	{
-		next = ft_xor(curr->both, prev);
+		next = ft_xor(prev, curr->both);
 		prev = curr;
 		curr = next;
+		free(prev);
 	}
-	return (prev);
 }

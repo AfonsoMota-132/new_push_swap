@@ -12,10 +12,10 @@
 
 #include "../../incs/push_swap.h"
 
-void	ft_push(t_lista **target, t_lista **src, char *str)
+void	ft_push(t_stack **target, t_stack **src, char *str)
 {
-	t_lista	*curr;
-	t_lista	*next;
+	t_stack	*curr;
+	t_stack	*next;
 
 	if (!*src)
 		return ;
@@ -45,14 +45,14 @@ void	ft_push_b(t_data *data)
 		data->tail_a = NULL;
 }
 
-void	ft_swap(t_lista **head, t_lista **tail, char *str)
+void	ft_swap(t_stack **head, t_stack **tail, char *str)
 {
-	t_lista	*first;
-	t_lista	*second;
-	t_lista	*third;
-	t_lista	*fourth;
+	t_stack	*first;
+	t_stack	*second;
+	t_stack	*third;
+	t_stack	*fourth;
 
-	if (!*head || ft_lista_size(*head) < 2)
+	if (!*head || ft_stack_size(*head) < 2)
 		return ;
 	first = *head;
 	second = first->both;
@@ -67,7 +67,7 @@ void	ft_swap(t_lista **head, t_lista **tail, char *str)
 		third->both = ft_xor(first, fourth);
 	}
 	*head = second;
-	if (ft_lista_size(*head) == 2)
+	if (ft_stack_size(*head) == 2)
 		*tail = first;
 	if (ft_strlen(str))
 		ft_putstr_fd(str, 1);
