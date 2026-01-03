@@ -1,91 +1,632 @@
 pb
 pb
 sb
-rb
 pb
-rb
+rrb
+pb
+pb
+rrb
+pb
+rrb
+pb
+rra
+pb
+rr
+rr
+pb
+rrb
+rrb
+rrb
+pb
+rrr
+pb
+rrb
 pb
 rrb
 pb
 ra
+rrb
 pb
-After push_b: head_b=9, tail_b=9
-After push_b: head_b=1, tail_b=9
-before cheapest, whats it pushing? 5
->>> Pushing nbr:5 id:4 | target nbr:1 id:0 | costs: A=0 B=1 | smallest=0
-After push_b: head_b=5, tail_b=9
-stack a
-nbr: 3	id: 2
-nbr: 7	id: 6
-nbr: 2	id: 1
-nbr: 8	id: 7
-nbr: 4	id: 3
-nbr: 6	id: 5
-
+rr
+rb
+rb
+pb
+rr
+rb
+pb
+ra
+ra
+rrb
+pb
+ra
+ra
+ra
+pb
+rrr
+rrr
+rrb
+pb
+rrr
+rrr
+rrr
+pb
+rrr
+pb
+rrb
+rrb
+pb
+rrb
+rrb
+pb
+rb
+rb
+pb
+rr
+rr
+pb
+rrr
+rrr
+rrr
+rrr
+pb
+rr
+ra
+ra
+ra
+pb
+rr
+rr
+rr
+rb
+pb
+rr
+rb
+rb
+rb
+pb
+rr
+rb
+pb
+ra
+rrb
+rrb
+rrb
+pb
+ra
+rrb
+rrb
+rrb
+rrb
+rrb
+pb
+rr
+rr
+rr
+rb
+rb
+pb
+rr
+rb
+rb
+rb
+pb
+rr
+rb
+rb
+pb
+rr
+rr
+rr
+rr
+rr
+pb
+rr
+rr
+rb
+rb
+rb
+pb
+rr
+rb
+rb
+rb
+pb
+rr
+rb
+rb
+rb
+rb
+pb
+ra
+ra
+ra
+rrb
+rrb
+pb
+ra
+rrb
+rrb
+rrb
+pb
+rr
+rr
+rr
+pb
+rr
+rb
+rb
+rb
+rb
+pb
+ra
+ra
+ra
+rrb
+rrb
+rrb
+pb
+ra
+rrb
+rrb
+rrb
+rrb
+rrb
+pb
+rr
+rr
+ra
+pb
+rr
+rr
+rr
+rr
+rr
+pb
+rr
+rr
+rr
+ra
+ra
+ra
+pb
+rr
+ra
+ra
+ra
+pb
+rr
+rr
+rr
+rr
+pb
+rr
+rr
+ra
+ra
+ra
+pb
+rr
+rr
+ra
+ra
+ra
+pb
+rr
+rb
+rb
+rb
+rb
+rb
+pb
+rr
+rr
+ra
+pb
+rr
+rb
+rb
+rb
+rb
+rb
+rb
+pb
+rr
+rr
+ra
+pb
+ra
+ra
+ra
+rrb
+pb
+rr
+rr
+rr
+rr
+rb
+pb
+rr
+rr
+rr
+ra
+ra
+ra
+pb
+rr
+pb
+rb
+rb
+pb
+rr
+rr
+rb
+rb
+rb
+rb
+pb
+rr
+rr
+rr
+pb
+ra
+rrb
+pb
+rr
+rr
+rr
+ra
+pb
+ra
+ra
+ra
+ra
+ra
+rrb
+rrb
+pb
+pb
+rr
+rr
+rr
+rb
+pb
+rr
+rr
+rb
+rb
+rb
+pb
+rr
+rr
+rr
+rr
+rr
+ra
+pb
+rr
+rr
+rb
+pb
+ra
+ra
+rrb
+pb
+rr
+ra
+ra
+pb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+pb
+rra
+rra
+rra
+pb
+rrr
+rra
+rra
+pb
+ra
+rrb
+rrb
+rrb
+pb
+rrr
+rrr
+rrr
+rrr
+rrr
+pb
+ra
+pb
+rrr
+rrr
+rra
+rra
+rra
+pb
+rrr
+rrr
+rrb
+rrb
+rrb
+pb
+rr
+ra
+pb
+rrr
+rrr
+rrr
+rra
+rra
+rra
+pb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+pb
+rr
+rb
+pb
+rr
+rb
+rb
+pb
+rrr
+rrr
+rrr
+rrr
+rrr
+rrb
+rrb
+rrb
+pb
+ra
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+pb
+ra
+rrb
+rrb
+pb
+rr
+pb
+rrr
+rrr
+rrr
+rra
+pb
+ra
+ra
+ra
+ra
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+pb
+rrr
+rrr
+rrb
+rrb
+rrb
+rrb
+pb
+rrr
+rrr
+pb
+rrr
+rrr
+pb
+rrb
+rrb
+rrb
+rrb
+pb
+rrr
+pb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+pb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+rrb
+pb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
+rb
 stack b
-nbr: 5	id: 4
-nbr: 1	id: 0
-nbr: 9	id: 8
-
-before cheapest, whats it pushing? 3
->>> Pushing nbr:3 id:2 | target nbr:1 id:0 | costs: A=0 B=1 | smallest=0
-After push_b: head_b=3, tail_b=5
-stack a
-nbr: 7	id: 6
-nbr: 2	id: 1
-nbr: 8	id: 7
-nbr: 4	id: 3
-nbr: 6	id: 5
-
-stack b
-nbr: 3	id: 2
-nbr: 1	id: 0
-nbr: 9	id: 8
-nbr: 5	id: 4
-
-before cheapest, whats it pushing? 7
->>> Pushing nbr:7 id:6 | target nbr:5 id:4 | costs: A=0 B=-1 | smallest=0
-After push_b: head_b=7, tail_b=9
-stack a
-nbr: 2	id: 1
-nbr: 8	id: 7
-nbr: 4	id: 3
-nbr: 6	id: 5
-
-stack b
-nbr: 7	id: 6
-nbr: 5	id: 4
-nbr: 3	id: 2
-nbr: 1	id: 0
-nbr: 9	id: 8
-
-before cheapest, whats it pushing? 8
->>> Pushing nbr:8 id:7 | target nbr:7 id:6 | costs: A=1 B=0 | smallest=0
-After push_b: head_b=8, tail_b=9
-stack a
-nbr: 4	id: 3
-nbr: 6	id: 5
-nbr: 2	id: 1
-
-stack b
-nbr: 8	id: 7
-nbr: 7	id: 6
-nbr: 5	id: 4
-nbr: 3	id: 2
-nbr: 1	id: 0
-nbr: 9	id: 8
-
-final
-stack a
-nbr: 4	id: 3
-nbr: 6	id: 5
-nbr: 2	id: 1
-
-stack b
-nbr: 8	id: 7
-nbr: 7	id: 6
-nbr: 5	id: 4
-nbr: 3	id: 2
-nbr: 1	id: 0
-nbr: 9	id: 8
+nbr: 1928473670	id: 98
+nbr: 1928473650	id: 97
+nbr: 1928473610	id: 96
+nbr: 1928473160	id: 95
+nbr: 1928473106	id: 94
+nbr: 1928374610	id: 93
+nbr: 1928374160	id: 92
+nbr: 1928374056	id: 91
+nbr: 1893047562	id: 90
+nbr: 1847293056	id: 89
+nbr: 1837492680	id: 88
+nbr: 1837492670	id: 87
+nbr: 1837492650	id: 86
+nbr: 1837492610	id: 85
+nbr: 1837492160	id: 84
+nbr: 1837492106	id: 83
+nbr: 1837492016	id: 82
+nbr: 1647382910	id: 81
+nbr: 1029384756	id: 80
+nbr: 938274670	id: 79
+nbr: 938274650	id: 78
+nbr: 938274610	id: 77
+nbr: 938274160	id: 76
+nbr: 938274106	id: 75
+nbr: 928473680	id: 74
+nbr: 928473670	id: 73
+nbr: 928473650	id: 72
+nbr: 928473610	id: 71
+nbr: 928473160	id: 70
+nbr: 928473106	id: 69
+nbr: 928374610	id: 68
+nbr: 928374106	id: 67
+nbr: 847392680	id: 66
+nbr: 847392670	id: 65
+nbr: 847392660	id: 64
+nbr: 847392650	id: 63
+nbr: 847392610	id: 62
+nbr: 847392160	id: 61
+nbr: 847392106	id: 60
+nbr: 847392016	id: 59
+nbr: 724159038	id: 58
+nbr: 483927670	id: 57
+nbr: 483927650	id: 56
+nbr: 483927610	id: 55
+nbr: 483927160	id: 54
+nbr: 483927016	id: 53
+nbr: 483926107	id: 52
+nbr: 483926106	id: 51
+nbr: 483729160	id: 50
+nbr: 473829156	id: 49
+nbr: 392847105	id: 48
+nbr: -392847105	id: 47
+nbr: -473829156	id: 46
+nbr: -483729160	id: 45
+nbr: -483926106	id: 44
+nbr: -483926107	id: 43
+nbr: -483927016	id: 42
+nbr: -483927160	id: 41
+nbr: -483927610	id: 40
+nbr: -483927650	id: 39
+nbr: -483927670	id: 38
+nbr: -847261903	id: 37
+nbr: -847392016	id: 36
+nbr: -847392106	id: 35
+nbr: -847392160	id: 34
+nbr: -847392610	id: 33
+nbr: -847392650	id: 32
+nbr: -847392660	id: 31
+nbr: -847392670	id: 30
+nbr: -847392680	id: 29
+nbr: -928374106	id: 28
+nbr: -928374610	id: 27
+nbr: -928473106	id: 26
+nbr: -928473160	id: 25
+nbr: -928473610	id: 24
+nbr: -928473650	id: 23
+nbr: -928473670	id: 22
+nbr: -938274106	id: 21
+nbr: -938274160	id: 20
+nbr: -938274610	id: 19
+nbr: -938274650	id: 18
+nbr: -938274670	id: 17
+nbr: -1029384756	id: 16
+nbr: -1456328917	id: 15
+nbr: -1837492016	id: 14
+nbr: -1837492106	id: 13
+nbr: -1837492160	id: 12
+nbr: -1837492610	id: 11
+nbr: -1837492650	id: 10
+nbr: -1837492670	id: 9
+nbr: -1837492680	id: 8
+nbr: -1847293056	id: 7
+nbr: -1928374056	id: 6
+nbr: -1928374160	id: 5
+nbr: -1928374610	id: 4
+nbr: -1928473106	id: 3
+nbr: -1928473160	id: 2
+nbr: -1928473650	id: 1
+nbr: -1928473670	id: 0
 

@@ -42,11 +42,6 @@ int	main(int ac, char **av)
 		ft_lista_index(data->head_a);
 		data->size = ft_lista_size(data->head_a);
 		ft_sort(data);
-		printf("final\n");
-		printf("stack a\n");
-		ft_print_lista(data->head_a);
-		printf("stack b\n");
-		ft_print_lista(data->head_b);
 		if (data)
 			ft_free_data(data);
 	}
