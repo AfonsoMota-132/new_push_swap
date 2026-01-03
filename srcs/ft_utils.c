@@ -49,18 +49,3 @@ bool	ft_comp_swap(t_stack *head)
 	second = first->both;
 	return (first->id < second->id);
 }
-
-t_stack	*ft_get_tail(t_stack *curr)
-{
-	t_stack	*prev;
-	t_stack	*next;
-
-	prev = NULL;
-	while (curr)
-	{
-		next = ft_xor(curr->both, prev);
-		prev = curr;
-		curr = next;
-	}
-	return (prev);
-}
