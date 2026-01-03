@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../incs/push_swap.h"
+
 t_stack	*ft_find_max(t_stack *head)
 {
 	t_stack	*max;
@@ -85,4 +87,3 @@ size_t	ft_stack_get_index(t_stack	*head, t_stack *node)
 	}
 	return (i);
 }
-
