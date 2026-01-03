@@ -1,50 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/02 19:32:32 by afogonca          #+#    #+#             */
-/*   Updated: 2026/01/03 11:59:55 by afogonca         ###   ########.fr       */
+/*   Created: 2026/01/03 10:41:16 by afogonca          #+#    #+#             */
+/*   Updated: 2026/01/03 10:42:15 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/push_swap.h"
 
-void	ft_print_lista(t_lista *curr)
+void	ft_free_data(t_data	*data)
+{
+	if (data)
+	{
+		if (data->head_a)
+			ft_free_lista(data->head_a);
+		if (data->head_b)
+			ft_free_lista(data->head_b);
+		free(data);
+	}
+}
+
+void	ft_free_lista(t_lista *curr)
 {
 	t_lista	*prev;
 	t_lista	*next;
 
 	prev = NULL;
-	while (curr)
+	while (curr != NULL)
 	{
-		printf("nbr: %i\tid: %i\n", curr->nbr, curr->id);
 		next = ft_xor(prev, curr->both);
 		prev = curr;
 		curr = next;
+		free(prev);
 	}
-	printf("\n");
-}
-
-int	main(int ac, char **av)
-{
-	t_data	*data;
-
-	if (ac < 2)
-		return (ft_putstr_fd("Error!\nNot Enough Arguments", 2), 1);
-	else
-	{
-		data = ft_new_data(ac, av);
-		if (!data)
-			return (1);
-		ft_lista_index(data->head_a);
-		if (ft_ver_sorted(data))
-			return (ft_free_data(data), 0);
-		ft_print_lista(data->head_a);
-		ft_print_lista(data->head_b);
-		ft_free_data(data);
-	}
-	return (0);
 }

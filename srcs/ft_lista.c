@@ -25,6 +25,26 @@ t_lista	*ft_lista_new(int nbr)
 	return (new);
 }
 
+size_t	ft_lista_size(t_lista *head)
+{
+	t_lista	*prev;
+	t_lista	*curr;
+	t_lista	*next;
+	size_t	i;
+
+	i = 0;
+	curr = head;
+	prev = NULL;
+	while (curr)
+	{
+		next = ft_xor(prev, curr->both);
+		prev = curr;
+		curr = next;
+		i++;
+	}
+	return (i);
+}
+
 int	ft_lista_add_utils(t_lista **head, t_lista **tail, long nbr)
 {
 	t_lista	*prev;
@@ -44,6 +64,8 @@ int	ft_lista_add_utils(t_lista **head, t_lista **tail, long nbr)
 		curr = next;
 	}
 	next = ft_lista_new(nbr);
+	if (!next)
+		return (1);
 	next->both = curr;
 	curr->both = ft_xor(prev, next);
 	*tail = next;
@@ -57,29 +79,11 @@ int	ft_lista_add_back(t_lista **head, t_lista **tail, long nbr)
 	if (!*head)
 	{
 		*head = ft_lista_new(nbr);
+		if (*head)
+			return (1);
 		*tail = *head;
 	}
 	else
 		return (ft_lista_add_utils(head, tail, nbr));
 	return (0);
-}
-
-void	ft_free_lista(t_lista *curr)
-{
-	t_lista	*prev;
-	t_lista	*next;
-
-	prev = NULL;
-	while (curr != NULL)
-	{
-		next = ft_xor(prev, curr->both);
-		prev = curr;
-		curr = next;
-		free(prev);
-	}
-}
-
-t_lista	*ft_xor(t_lista *x, t_lista *y)
-{
-	return ((t_lista *)((uintptr_t)(x) ^ (uintptr_t)(y)));
 }

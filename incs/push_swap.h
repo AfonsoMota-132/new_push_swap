@@ -6,7 +6,7 @@
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 19:25:52 by afogonca          #+#    #+#             */
-/*   Updated: 2026/01/02 21:11:36 by afogonca         ###   ########.fr       */
+/*   Updated: 2026/01/03 12:04:16 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "../libft/libft.h"
 # include <stdint.h>
+# include <stdbool.h>
 # include <limits.h>
 
 typedef struct s_lista
@@ -37,5 +38,18 @@ void	ft_free_data(t_data	*data);
 int		ft_lista_add_back(t_lista **head, t_lista **tail, long nbr);
 t_lista	*ft_xor(t_lista *x, t_lista *y);
 void	ft_free_lista(t_lista *curr);
+size_t	ft_lista_size(t_lista *head);
+void	ft_lista_index(t_lista *head);
+bool	ft_ver_sorted(t_data *data);
+void	ft_rev_rot_both(t_data *data);
+
+//	Operations
+void	ft_swap(t_lista **head, char *str);
+void	ft_swap_both(t_data *data);
+void	ft_push(t_lista **target, t_lista **src, char *str);
+
+
+t_lista	*ft_rmv_head(t_lista **lista);
+t_lista	*ft_rmv_tail(t_lista **tail);
 
 #endif

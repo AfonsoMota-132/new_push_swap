@@ -6,7 +6,7 @@
 #    By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/02 19:37:56 by afogonca          #+#    #+#              #
-#    Updated: 2026/01/02 20:33:53 by afogonca         ###   ########.fr        #
+#    Updated: 2026/01/03 12:00:10 by afogonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,9 @@ MAKE=make -C
 
 LIBFT=libft/libft.a
 
-SRCS=$(addprefix srcs/, main.c ft_data.c ft_lista.c)
+OPERATIONS=$(addprefix operations/, ft_push_swap.c ft_rot.c ft_utils.c)
+
+SRCS=$(addprefix srcs/, main.c ft_data.c ft_lista.c ft_free.c ft_index.c $(OPERATIONS))
 OBJS=$(SRCS:.c=.o)
 
 all: $(NAME)

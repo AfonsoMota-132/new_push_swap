@@ -59,23 +59,11 @@ t_data	*ft_new_data(int ac, char **av)
 	while (++i < ac)
 	{
 		split = ft_split_multi(av[i], " \t");
+		if (!split)
+			return (ft_free_data(data), NULL);
 		if (ft_iterate_split(data, split))
-		{
-			ft_free_split(split);
-			ft_free_data(data);
-			return (NULL);
-		}
+			return (ft_free_split(split), ft_free_data(data), NULL);
 		ft_free_split(split);
 	}
 	return (data);
-}
-
-void	ft_free_data(t_data	*data)
-{
-	if (data)
-	{
-		if (data->head_a)
-			ft_free_lista(data->head_a);
-		free(data);
-	}
 }
